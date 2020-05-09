@@ -1,0 +1,17 @@
+language: minimal
+
+env:
+  - IMAGE_NAME=foxcapades/alpine-oracle
+
+services:
+- docker
+
+script:
+- docker build -t ${IMAGE_NAME}:${TRAVIS_BRANCH}
+- docker tag ${IMAGE_NAME}:${TRAVIS_BRANCH} ${IMAGE_NAME}:latest
+
+deploy:
+  provider: script
+  script: bash push.sh
+  on:
+    tags: true
