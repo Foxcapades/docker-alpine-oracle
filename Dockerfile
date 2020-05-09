@@ -18,8 +18,10 @@ RUN wget https://download.oracle.com/otn_software/linux/instantclient/19600/inst
        instantclient_19_6/ucp.jar \
        instantclient_19_6/xstreams.jar -d /jdbc
 
+RUN apk del wget unzip
+
 WORKDIR /lib
-RUN ls && ln -s libnsl.so.2 /usr/lib/libnsl.so.1 \
+RUN ln -s libnsl.so.2 /usr/lib/libnsl.so.1 \
     && ln -s libc.so.6 /usr/lib/libresolv.so.2
 
 WORKDIR /
