@@ -1,2 +1,5 @@
 = Alpine & Oracle Instant Client Docker Image
 
+Alpine Linux with Oracle Instant Client.
+
+Java libs are located in /jdbc.
