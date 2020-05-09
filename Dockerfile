@@ -7,7 +7,7 @@ LABEL name="alpine-oracle" \
 
 RUN apk --no-cache add wget unzip libaio libnsl libc6-compat
 
-RUN wget https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip \
+RUN wget -q https://download.oracle.com/otn_software/linux/instantclient/19600/instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip \
     && unzip -j instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip \
        -x instantclient_19_6/ojdbc8.jar \
           instantclient_19_6/ucp.jar \
