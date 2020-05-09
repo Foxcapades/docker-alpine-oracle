@@ -17,7 +17,8 @@ RUN wget -q https://download.oracle.com/otn_software/linux/instantclient/19600/i
     && unzip -j instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip \
        instantclient_19_6/ojdbc8.jar \
        instantclient_19_6/ucp.jar \
-       instantclient_19_6/xstreams.jar -d /jdbc
+       instantclient_19_6/xstreams.jar -d /jdbc \
+    && rm instantclient-basiclite-linux.x64-19.6.0.0.0dbru.zip
 
 RUN apk del wget unzip
 
