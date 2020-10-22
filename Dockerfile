@@ -1,7 +1,7 @@
-FROM alpine:20200428
+FROM alpine:edge
 
 LABEL name="alpine-oracle" \
-      version="1.3" \
+      version="1.4" \
       description="Alpine Linux with Oracle Instant Client" \
       homepage="https://github.com/Foxcapades/docker-alpine-oracle"
 
