@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.16.3
 
 LABEL name="alpine-oracle" \
       version="1.6" \
